@@ -1,5 +1,5 @@
 resource "aws_vpc" "vpc_virginia" {
-  cidr_block = "10.0.0.0/16"
+  cidr_block = var.virgina_cidr
   tags = {
     Name = "VPC_VIRGINIA"
     name = "prueba"
@@ -7,7 +7,7 @@ resource "aws_vpc" "vpc_virginia" {
   }
 }
 resource "aws_vpc" "vpc_ohio" {
-  cidr_block = "10.20.0.0/16"
+  cidr_block = var.ohio_cidr
   tags = {
     Name = "VPC_OHIO"
     name = "prueba"
