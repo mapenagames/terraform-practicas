@@ -6,12 +6,23 @@ variable "virgina_cidr" {
   sensitive   = false
 }
 
-variable "public_subnet" {
-  description = "CIDR public subnet"
-  type        = string
+#variable "public_subnet" {
+#  description = "CIDR public subnet"
+#  type        = string
+#}
+#
+#variable "private_subnet" {
+#  description = "CIDR private subnet"
+#  type        = string
+#}
+
+variable "subnets" {
+  description = "lista de subnets"
+  type        = list(string)
 }
 
-variable "private_subnet" {
-  description = "CIDR private subnet"
-  type        = string
+variable "tags" {
+  description = "Tags del proycto"
+  type        = map(string)
+
 }
