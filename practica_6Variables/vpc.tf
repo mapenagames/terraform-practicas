@@ -11,6 +11,7 @@ resource "aws_subnet" "public_subnet" {
   cidr_block = var.subnets[0]
   #el subnet publica tiene que podes asignar ip publica y para eso lo debemos indicar explicitamente: (x default es false)
   map_public_ip_on_launch = true
+  ## el tag siguiente se agrega a los tags definidos como default en provider.
   tags = {
     Name = "PUBLIC SUBNET"
   }
@@ -20,6 +21,7 @@ resource "aws_subnet" "public_subnet" {
 resource "aws_subnet" "private_subnet" {
   vpc_id     = aws_vpc.vpc_virginia.id
   cidr_block = var.subnets[1]
+  ## el tag siguiente se agrega a los tags definidos como default en provider.
   tags = {
     Name = "PRIVATE SUBNET"
   }
