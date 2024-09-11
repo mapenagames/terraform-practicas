@@ -1,2 +1,33 @@
 uso de variables marce.tfvars
 este solo sirve si ejecutas el plan --var-file marce.tfvars
+
+
+Terraform will perform the following actions:
+
+  # aws_subnet.private_subnet will be updated in-place
+  ~ resource "aws_subnet" "private_subnet" {
+        id                                             = "subnet-0c62e0e1ab6d30351"
+      ~ tags                                           = {
+          ~ "Name" = "PRIVATE SUBNET" -> "PRIVATE SUBNET temp"
+        }
+      ~ tags_all                                       = {
+          ~ "Name"        = "PRIVATE SUBNET" -> "PRIVATE SUBNET temp"
+            # (5 unchanged elements hidden)
+        }
+        # (19 unchanged attributes hidden)
+    }
+
+  # aws_subnet.public_subnet will be updated in-place
+  ~ resource "aws_subnet" "public_subnet" {
+        id                                             = "subnet-0c611fd1b3d7b5cea"
+      ~ tags                                           = {
+          ~ "Name" = "PUBLIC SUBNET" -> "PUBLIC SUBNET temp"
+        }
+      ~ tags_all                                       = {
+          ~ "Name"        = "PUBLIC SUBNET" -> "PUBLIC SUBNET temp"
+            # (5 unchanged elements hidden)
+        }
+        # (19 unchanged attributes hidden)
+    }
+
+Plan: 0 to add, 2 to change, 0 to destroy.
