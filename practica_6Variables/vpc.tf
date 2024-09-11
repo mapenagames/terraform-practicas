@@ -1,5 +1,6 @@
 resource "aws_vpc" "vpc_virginia" {
   cidr_block = var.virgina_cidr
+  ## el tag siguiente se agrega a los tags definidos como default en provider.
   tags = {
     Name = "VPC_VIRGINIA"
   }
