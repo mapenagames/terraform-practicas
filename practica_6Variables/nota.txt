@@ -1,26 +1,3 @@
-Terraform will perform the following actions:
-
-  # aws_instance.public_instance must be replaced
--/+ resource "aws_instance" "public_instance" {
-      ~ arn                                  = "arn:aws:ec2:us-east-1:825765400631:instance/i-0e20b1a4035c9b763" -> (known after apply)
-      ~ associate_public_ip_address          = true -> (known after apply)
-      ~ availability_zone                    = "us-east-1a" -> (known after apply)
-      ~ cpu_core_count                       = 1 -> (known after apply)
-      ~ cpu_threads_per_core                 = 1 -> (known after apply)
-      ~ disable_api_stop                     = false -> (known after apply)
-      ~ disable_api_termination              = false -> (known after apply)
-      ~ ebs_optimized                        = false -> (known after apply)
-      - hibernation                          = false -> null
-      + host_id                              = (known after apply)
-      + host_resource_group_arn              = (known after apply)
-      + iam_instance_profile                 = (known after apply)
-      ~ id                                   = "i-0e20b1a4035c9b763" -> (known after apply)
-      ~ instance_initiated_shutdown_behavior = "stop" -> (known after apply)
-      ~ instance_state                       = "running" -> (known after apply)
-      ~ ipv6_address_count                   = 0 -> (known after apply)
-      ~ ipv6_addresses                       = [] -> (known after apply)
-      + key_name                             = "mykey" # forces replacement    <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-      ~ monitoring                           = false -> (known after apply)
-      + outpost_arn                          = (known after apply)
-      + password_data                        = (known after apply)
-      + placement_group                      = (known after apply)
+data "aws_key_pair" "mikey" {
+  key_name = "mykey"
+}
