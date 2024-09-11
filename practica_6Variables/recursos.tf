@@ -5,7 +5,6 @@ resource "aws_vpc" "vpc_virginia" {
     Name = "VPC_VIRGINIA"
   }
 }
-
 resource "aws_subnet" "public_subnet" {
   vpc_id     = aws_vpc.vpc_virginia.id
   cidr_block = var.subnets[0]
@@ -15,9 +14,7 @@ resource "aws_subnet" "public_subnet" {
   tags = {
     Name = "PUBLIC SUBNET"
   }
-
 }
-
 resource "aws_subnet" "private_subnet" {
   vpc_id     = aws_vpc.vpc_virginia.id
   cidr_block = var.subnets[1]
@@ -25,5 +22,4 @@ resource "aws_subnet" "private_subnet" {
   tags = {
     Name = "PRIVATE SUBNET"
   }
-
 }
