@@ -24,3 +24,11 @@ resource "aws_subnet" "private_subnet_NEW" {
   }
   depends_on = [aws_subnet.public_subnet]
 }
+
+resource "aws_internet_gateway" "igw" {
+  vpc_id = aws_vpc.main.id
+
+  tags = {
+    Name = "main"
+  }
+}
