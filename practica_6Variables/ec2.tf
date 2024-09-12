@@ -6,6 +6,10 @@ resource "aws_instance" "public_instance" {
   ami           = "ami-0182f373e66f89c85"
   instance_type = "t2.micro"
   # recurso "aws_subnet" + "public_subnet"
-  subnet_id = aws_subnet.public_subnet.id
+  subnet_id = aws_subnet.private_subnet_NEW.id
   key_name  = data.aws_key_pair.mikey.key_name
+
+  lifecycle {
+    create_before_destroy = true
+  }
 }

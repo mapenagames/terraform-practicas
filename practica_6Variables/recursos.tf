@@ -15,7 +15,7 @@ resource "aws_subnet" "public_subnet" {
     Name = "PUBLIC SUBNET temp"
   }
 }
-resource "aws_subnet" "private_subnet" {
+resource "aws_subnet" "private_subnet_NEW" {
   vpc_id     = aws_vpc.vpc_virginia.id
   cidr_block = var.subnets[1]
   ## el tag siguiente se agrega a los tags definidos como default en provider.
