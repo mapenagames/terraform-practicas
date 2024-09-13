@@ -6,9 +6,9 @@ resource "aws_instance" "public_instance" {
   ami           = "ami-0182f373e66f89c85"
   instance_type = "t2.micro"
   # recurso "aws_subnet" + "public_subnet"
-  subnet_id = aws_subnet.private_subnet_NEW.id
-  key_name  = data.aws_key_pair.mikey.key_name
-
+  subnet_id              = aws_subnet.private_subnet_NEW.id
+  key_name               = data.aws_key_pair.mikey.key_name
+  vpc_security_group_ids = [aws_security_group.sg_public_instance.id]
   lifecycle {
     create_before_destroy = true
   }
