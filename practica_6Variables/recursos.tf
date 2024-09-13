@@ -14,7 +14,7 @@ resource "aws_subnet" "public_subnet" {
   map_public_ip_on_launch = true
   ## el tag siguiente se agrega a los tags definidos como default en provider.
   tags = {
-    Name = "PUBLIC SUBNET temp"
+    Name = "PUBLIC SUBNET"
   }
 }
 #######################################################################################
@@ -23,7 +23,7 @@ resource "aws_subnet" "private_subnet_NEW" {
   cidr_block = var.subnets[1]
   ## el tag siguiente se agrega a los tags definidos como default en provider.
   tags = {
-    Name = "PRIVATE SUBNET temp"
+    Name = "PRIVATE SUBNET"
   }
   depends_on = [aws_subnet.public_subnet]
 }
