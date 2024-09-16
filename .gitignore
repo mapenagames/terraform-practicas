@@ -1,5 +1,4 @@
 .terraform
  **\terraform.tfst*
  **\.terraform.lock.*
- **\logs.txt
  **\terraform.tfstate*
