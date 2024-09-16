@@ -17,12 +17,13 @@
 ###    "Name" = var.instancias[count.index]
 ###  }
 ###}
-## esta es la forma correcta para crear varios recursos y poder eleminar el que se desea.
 
+
+## esta es la forma correcta para crear varios recursos y poder eleminar el que se desea.
 variable "instancias" {
   description = "Nombre de las instancias"
   type        = set(string)
-  default     = ["apache", "mysql", "jumserver"]
+  default     = ["mysql", "jumserver"]
 }
 
 resource "aws_instance" "public_instance" {
