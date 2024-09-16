@@ -4,3 +4,8 @@
  **\terraform.tfstate*
  **\terraform.tfstate
  **\.terraform.lock.hcl
+ *\terraform.tfst*
+ *\.terraform.lock.*
+ *\terraform.tfstate*
+ *\terraform.tfstate
+ *\.terraform.lock.hcl
