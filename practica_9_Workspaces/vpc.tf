@@ -1,5 +1,9 @@
 resource "aws_vpc" "vpc_virginia" {
-  cidr_block = var.virginia_cidr
+  #cidr_block = var.virginia_cidr
+  ## la funcion lookup va a buscar el valor terraform.workspace que trae el nombre del workspace que se esta parado,ej dev
+  ## y luego va a buscar el valor "dev" en el map de var.virginia_cidr trayendo "172.16.0.0/16", sino encuentra el valor en el map arrojara un error al ejecutar el plan.
+  cidr_block = lookup(var.virginia_cidr, terraform.workspace)
+
   tags = {
     "Name" = "vpc_virginia"
   }
