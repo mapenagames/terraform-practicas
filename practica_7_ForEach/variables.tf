@@ -35,6 +35,9 @@ variable "ec2_specs" {
 
 }
 
-
+variable "enable_monitoreo" {
+  description = "habilita el despliegue de un servidor de monitoreo"
+  type        = bool
+}
 
 
