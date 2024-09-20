@@ -22,4 +22,5 @@ ec2_specs = {
   "instance_type" = "t2.micro"
 }
 
-enable_monitoreo = false
+enable_monitoreo  = false
+ingress_port_list = [22, 80, 443]

@@ -40,4 +40,7 @@ variable "enable_monitoreo" {
   type        = bool
 }
 
-
+variable "ingress_port_list" {
+  description = "lista de puertos de ingress"
+  type        = list(number)
+}
