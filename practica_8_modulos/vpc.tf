@@ -94,5 +94,5 @@ module "mybucket" {
 }
 
 output "s3_arn" {
-  value = module.mybucket.s3_arn_arn
+  value = module.mybucket.s3_arn
 }
