@@ -1,18 +1,5 @@
 .terraform
- **\terraform.tfst*
- **\.terraform.lock.*
- **\terraform.tfstate*
- **\terraform.tfstate
- **\.terraform.lock.hcl
- **\terraform.tfst*
- **/.terraform.lock.*
- **/terraform.tfstate*
- **/terraform.tfstate
- **/.terraform.lock.hcl
- **/marcelo.txt
- practica_7_dinamics/marcelo.txt
- /practica_7_dinamics/marcelo.txt
- */practica_7_dinamics/marcelo.txt
- **/practica_7_dinamics/marcelo.txt
- **\practica_7_dinamics\marcelo.
- marcelo.txt
+.terraform.lock.*
+terraform.tfstate*
+.terraform.tfstate*
+.terraform.lock.hcl
