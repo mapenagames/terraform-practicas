@@ -93,6 +93,6 @@ module "mybucket" {
   bucket_name = "nomuni1324356"
 }
 
-output "s3_arn" {
+output "s3_arnX" {
   value = module.mybucket.s3_arn
 }
