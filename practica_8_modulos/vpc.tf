@@ -92,3 +92,7 @@ module "mybucket" {
   source      = "./modulo/s3"
   bucket_name = "nomuni1324356"
 }
+
+output "s3_arn" {
+  value = module.mybucket.s3_arn_arn
+}
