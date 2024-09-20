@@ -88,3 +88,7 @@ resource "aws_security_group" "sg_public_instance" {
   }
 }
 
+module "mybucket" {
+  source      = "./modulo/s3"
+  bucket_name = "nomuni1324356"
+}
